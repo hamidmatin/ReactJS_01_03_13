@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn1">+</button>
+    <hr />
+    <button id="btn2">+</button>
+    <button id="btn3">-</button>
+    <button id="btn4">*</button>
+    <button id="btn5">/</button>
+
+    <hr />
+    <button id="btn6">Sum</button>
+    <button id="btn7">Mul</button>
+    <button id="btn8">Compare</button>
+    <p id="p1" style="white-space: pre"></p>
+    <p id="p1-1" style="white-space: pre"></p>
+    <p id="p2"></p>
+    <p id="p3" style="white-space: pre"></p>
+    <p id="p4"></p>
+
+    <script>
+      // let sample;
+      // sample = 20;
+
+      // sample = 'ssdd'
+
+      // sample = function(){
+      //   return Math.floor(Math.random() * 50);
+      // };
+
+      function sample() {
+        return Math.floor(Math.random() * 50);
+      }
+
+      let newSample = sample;
+
+      document.getElementById('p1').innerHTML = sample;
+      document.getElementById('p1-1').innerHTML = newSample();
+
+      const calcSum = function () {
+        let x = Math.floor(Math.random() * 50);
+        let y = Math.floor(Math.random() * 50);
+        let result;
+
+        result = x + y;
+
+        document.getElementById('p2').innerHTML = `x = ${x}, y = ${y}, Result = ${result}`;
+      };
+
+      /********************/
+      document.getElementById('btn1').onclick = function () {
+        calcSum();
+      };
+
+      /*********************/
+      const calcWithParam = function (operator) {
+        let x = Math.floor(Math.random() * 50);
+        let y = Math.floor(Math.random() * 50);
+        let result;
+
+        switch (operator) {
+          case '+':
+            result = x + y;
+            break;
+          case '-':
+            result = x - y;
+            break;
+          case '*':
+            result = x * y;
+            break;
+          case '/':
+            result = x / y;
+            break;
+        }
+
+        document.getElementById('p2').innerHTML = `x = ${x}, y = ${y}, Result = ${result}`;
+      };
+      
+      /***********/
+      document.getElementById('btn2').onclick = function () {
+        calcWithParam('+');
+      };
+      document.getElementById('btn3').onclick = function () {
+        calcWithParam('-');
+      };
+      document.getElementById('btn4').onclick = function () {
+        calcWithParam('*');
+      };
+      document.getElementById('btn5').onclick = function () {
+        calcWithParam('/');
+      };
+
+
+      /*************************************/
+      const calcByCalbackFunction = function (calculate) {
+        let x = Math.floor(Math.random() * 50);
+        let y = Math.floor(Math.random() * 50);
+        let result;
+
+        document.getElementById('p3').innerHTML = calculate;
+        result = calculate(x, y);
+        document.getElementById('p4').innerHTML = `x = ${x}, y = ${y}, Result = ${result}`;
+      };
+
+      // const sum = 20;
+
+      const sum = function (a, b) {
+        return a + b;
+      };
+
+      const mul = function (x, y) {
+        return x * y;
+      };
+
+      const div = function (x, y) {
+        return x / y;
+      };
+      const sub = function (x, y) {
+        return x - y;
+      };
+
+      const compare = function (x, y) {
+        if (x > y) return 'x > y';
+        else if (x < y) return 'x < y';
+        else return 'x = y';
+      };
+
+      /****************/
+      document.getElementById('btn6').onclick = function () {
+        calcByCalbackFunction(sum);
+      };
+      document.getElementById('btn7').onclick = function () {
+        calcByCalbackFunction(mul);
+      };
+      document.getElementById('btn8').onclick = function () {
+        calcByCalbackFunction(compare);
+      };
+    </script>
+  </body>
+</html>
