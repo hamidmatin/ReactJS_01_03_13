@@ -1,0 +1,1 @@
+export { default as UseCssModule } from './css-module'

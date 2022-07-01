@@ -1,0 +1,13 @@
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 16px;
+    margin: 10px;
+}
+.btn-primary {
+    background-color: rgb(80, 164, 248);
+    color: white;
+}
+.btn-primary:hover > span{
+    border-bottom: 2px solid white;
+}

@@ -1,0 +1,32 @@
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 16px;
+    margin: 10px;
+}
+.btn-primary {
+    background-color: rgb(80, 164, 248);
+    color: white;
+}
+.btn-primary:hover > span{
+    border-bottom: 2px solid white;
+}
+.btn-primary:global.active > span{
+    border-bottom: 2px solid white;
+}
+ .btn-primary.active{
+    background-color: darkblue;
+}
+.btn-danger {
+    background-color: rgb(250, 20, 55);
+    color: white;
+}
+.btn-danger:hover > span{
+    border-bottom: 2px solid white;
+}
+.btn-danger:global.active > span{
+    border-bottom: 2px solid white;
+}
+ .btn-danger.active{
+    background-color: darkred;
+}

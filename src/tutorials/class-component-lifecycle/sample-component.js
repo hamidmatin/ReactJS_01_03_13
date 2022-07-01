@@ -73,7 +73,7 @@ export default class SampleComponent extends Component {
 
   componentDidMount() {
     console.log('(4. Mounting) componentDidMount');
-    this.setState({ counter: 3 });
+    // this.setState({ counter: 3 });
   }
   getSnapshotBeforeUpdate(prevProps, prevState) {
     // console.log('(8. Updating) getSnapshotBeforeUpdate');
@@ -93,8 +93,9 @@ export default class SampleComponent extends Component {
     // console.log('this.props = ', this.props);
     // console.log('this.state = ', this.state);
     // console.log('snapshot = ', snapshot);
-    if(this.state.counter !== prevState.counter)
-      this.setState({...this.state, counter: 5})
+
+    // if(this.state.counter !== prevState.counter)
+    //   this.setState({...this.state, counter: 5})
   }
   componentWillUnmount() {
     console.log('(10. Unmounting) componentWillUnmount');

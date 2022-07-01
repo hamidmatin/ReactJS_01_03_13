@@ -6,7 +6,7 @@ export const MainLayout = ({ children }) => {
   return (
     <Fragment>
       <Header />
-      <main className='container'>{children}</main>
+      <main>{children}</main>
       <Footer />
     </Fragment>
   );

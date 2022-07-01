@@ -1,0 +1,26 @@
+.tutorials-wrapper {
+    display: flex
+}
+.tutorials-wrapper > aside {
+    flex-basis: 20%;
+    padding: 50px 0;
+}
+.tutorials-wrapper >aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.tutorials-wrapper > aside a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 8px 16px;
+}
+.tutorials-wrapper > aside a:hover,
+.tutorials-wrapper > aside a.active {
+    color: red;
+}
+.tutorials-wrapper > section {
+    flex-basis: 80%;
+    padding: 30px;
+}
