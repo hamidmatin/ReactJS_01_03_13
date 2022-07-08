@@ -1,0 +1,32 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+  }
+.button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 16px;
+  background-color: #f1f1f1;
+  color: #555;
+  border: none;
+  outline: none;
+  font-size: inherit;
+  cursor: pointer;
+  transition: all 200ms
+}
+.button:hover {
+  background-color: #555;
+  color: #f1f1f1;
+}
+
+.button + .button {
+  margin-left: 8px;
+}
+
+.not-found-img {
+    display: block;
+    width: 30%;
+}

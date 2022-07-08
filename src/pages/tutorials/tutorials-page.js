@@ -1,11 +1,13 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
+import { BasePage } from '../../components/base-page/base-page';
 import './tutorials.css';
 
 export const TutorialsPage = () => {
   return (
-    <div className='tutorials-wrapper'>
-      <aside>
+    <BasePage title={'Tutorials'} className='container'>
+      <div className='tutorials-wrapper'>
+        <aside>
         <ul>
           <li>
             <NavLink to='/tutorials'>Home</NavLink>
@@ -36,6 +38,8 @@ export const TutorialsPage = () => {
       <section>
         <Outlet />
       </section>
-    </div>
+      </div>
+      
+    </BasePage>
   );
 };

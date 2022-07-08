@@ -6,6 +6,7 @@ import Button from './button';
 
 import styles from './calculator-page.module.css';
 import buttonStyles from './button.module.css';
+import { BasePage } from '../../components/base-page/base-page';
 // import { btnValues } from './btn-values'
 
 const CalculatorPage = () => {
@@ -206,7 +207,8 @@ const CalculatorPage = () => {
   // signClickHandler function
 
   return (
-    <div className={styles['calculator-page']}>
+    <BasePage title={'Calculator'} description='Calculator Sample'>
+      <div className={styles['calculator-page']}>
       <Wrapper>
         <Screen value={calc.num ? calc.num : calc.res} />
         <ButtomBox>
@@ -215,7 +217,9 @@ const CalculatorPage = () => {
           ))}
         </ButtomBox>
       </Wrapper>
-    </div>
+
+      </div>
+    </BasePage>
   );
 };
 

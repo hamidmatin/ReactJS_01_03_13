@@ -1,0 +1,31 @@
+.card {
+    padding: 8px;
+    border: 1px solid #f1f1f1;
+    box-shadow: 0 4px 6px -2px black;
+}
+.card .card-title {
+    text-align: center;
+}
+.card .card-text {
+    margin-bottom: 16px;
+}
+.card .card-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px 0;
+}
+
+.icon-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #555;
+    padding: 8px;
+}
+.icon-button + .icon-button {
+    margin-left: 8px;
+}
+.icon-button:hover {
+    background-color: #e7e7e7;
+}

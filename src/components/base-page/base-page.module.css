@@ -1,0 +1,9 @@
+.title {
+    font-size: 48px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.title > span {
+    border-bottom: 4px solid red;
+}

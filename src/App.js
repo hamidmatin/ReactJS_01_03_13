@@ -14,6 +14,7 @@ import { TutorialHome } from './tutorials/home/tutorial-home';
 import { UseCssModule } from './tutorials/css-module';
 import { PageNotFound } from './pages/404/page-not-found';
 import { CalculatorPage } from './pages/calculator';
+import UsersPage from './pages/users/users';
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
           </Route>
 
           <Route path='calculator' element={<CalculatorPage />} />
+          
+          <Route path='users' element={<UsersPage />} />
+
           <Route path='*' element={<PageNotFound />} />
         </Routes>
       </MainLayout>

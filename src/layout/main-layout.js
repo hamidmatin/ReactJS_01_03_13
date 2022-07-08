@@ -1,13 +1,14 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import { Footer } from '../components/footer/footer';
 import { Header } from '../components/header/header';
 
 export const MainLayout = ({ children }) => {
   return (
-    <Fragment>
+    <HelmetProvider>
       <Header />
       <main>{children}</main>
       <Footer />
-    </Fragment>
+    </HelmetProvider>
   );
 };

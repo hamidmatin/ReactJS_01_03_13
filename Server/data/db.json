@@ -1,0 +1,10 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Product Name 1",
+            "price": 45654,
+            "image": "http://localhost:3000/images/..."
+        }
+    ]
+}
