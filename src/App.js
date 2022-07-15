@@ -14,7 +14,8 @@ import { TutorialHome } from './tutorials/home/tutorial-home';
 import { UseCssModule } from './tutorials/css-module';
 import { PageNotFound } from './pages/404/page-not-found';
 import { CalculatorPage } from './pages/calculator';
-import UsersPage from './pages/users/users';
+import { UsersPage ,UserNewPage, UserEditPage } from './pages/users';
+import { ProductsPage } from './pages/products';
 
 function App() {
   return (
@@ -36,7 +37,18 @@ function App() {
           <Route path='calculator' element={<CalculatorPage />} />
           
           <Route path='users' element={<UsersPage />} />
+          <Route path='users/new' element={<UserNewPage />} />
+          {/* 
+              URL Parameter Syntax
 
+              path='path/:parameter'
+              path='path/:parameter/path'
+              path='path/:parameter1/:parameter2'
+              path='path/:parameter1/path/:parameter2'
+          */}
+          <Route path='users/edit/:id' element={<UserEditPage />} />
+
+          <Route path='products' element={<ProductsPage />} />
           <Route path='*' element={<PageNotFound />} />
         </Routes>
       </MainLayout>
